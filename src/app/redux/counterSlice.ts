@@ -11,8 +11,8 @@ const initialState: CounterState = {
 
 export const counterSlice = createSlice({
     name: 'counter',
-initialState,
-reducers: {
+    initialState,
+    reducers: {
     increment: (state) => {
 
     state.value += 1

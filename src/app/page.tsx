@@ -1,16 +1,18 @@
 'use client'
 import React from 'react'
 import { useAppSelector } from './hooks'
+import Public from './public/Public';
+import Private2 from './private/Private2';
+
 
 const Home = () => {
-  const counter = useAppSelector((state)=>state.counter);
-  const stagiaire = useAppSelector((state)=>state.stagiaire);
-  console.log("stagiaire : ", stagiaire.value);
+  const user = useAppSelector((state)=>state.user);
+
   return (
     <div>
-            <h1 className="text-center mt-10 text-5xl">Home</h1>
-            <h1 className="text-center mt-10 text-3xl">{counter.value}</h1>
-
+      {
+        !(user === null)? <Private2/> : <Public/>
+      }
     </div>
   )
 }

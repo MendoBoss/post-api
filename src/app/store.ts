@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counter from "./redux/counterSlice"
 import stagiaire from "./redux/stagiaireSlice"
+import user from './redux/userSlice'
 
 	export const store = configureStore({
 	  reducer: {
         counter : counter,
         stagiaire : stagiaire,
+		user : user,
       },
 	})
 
